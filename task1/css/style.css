@@ -1,0 +1,261 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 4000px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin: auto;
+    
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5em;
+
+
+}
+
+div.container {
+    width: 1200px;
+    margin: auto;
+}
+
+
+
+nav {
+   
+    width: 100%;
+    /* height: 80px; */
+    
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    /*! box-shadow: 10px 10px 115px white; */
+    border-bottom: 1.3px solid rgba(255, 255, 255, 0.29);
+     /* background-color: rgb(101 72 203 / 80%); */
+    padding: 20px 0;
+}
+.nav-black{
+    background-color:red;
+}
+nav div.row{
+    display: flex;
+    flex-direction: row ;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+nav div.logo {
+    flex-basis: 60%;
+  
+}
+
+nav div.logo img {
+    width: 22%;
+    
+}
+
+nav div.list_nav {
+    flex-basis: 40%;
+    
+}
+
+nav div.list_nav ul {
+    display: flex;
+}
+
+nav div.list_nav ul li {
+    list-style: none;
+     
+    padding: 10px 20px;
+}
+
+nav div.list_nav ul li a {
+    text-decoration: none;
+    color: white;
+   font-size: 18px;
+   font-weight: 600;
+   
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+nav div.list_nav ul li a i.fas{
+    font-size: 17px;
+    font-weight: 200;
+
+}
+nav div.list_nav ul li:last-child {
+    padding-right: 0;
+}
+
+nav div.list_nav ul li:hover a {
+    color: #4274b7;
+    font-weight: bold;
+    text-shadow: 10px 10px 10px #4274b7;
+}
+
+header {
+    width: 100%;
+    height: 850px;
+    background-image: url("../img/business-main.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    position: relative;
+}
+
+.overlay{
+    width:100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color:rgba(0,0,0,0.1);
+}
+header div.header_info {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+padding-top: 150px;
+    color: white;
+    /* z-index: 2; */
+}
+
+header div.header_info h2.content_head {
+    font-size: 100px;
+    margin-bottom: 22px;
+    line-height: 1.2em;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+header div.header_info p.content_p {
+    font-size: 30px;
+    padding: 22px 0px 0px 0px;
+    font-weight: 400;
+
+    line-height: 1.2;
+}
+header div.header_info p:last-of-type{
+    margin-bottom: 40px;
+}
+button.content_btn{
+    padding: 20px 40px;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+    background-color:white;
+    border:none;
+    outline: none;
+    margin-left: 5px;
+     margin-right: 5px;
+}
+button.btn1{
+    background-color:#4274b7;
+    
+}
+button.btn1 span{
+    color:white;
+}
+button.btn1:hover {
+     background-color:white;
+}
+button.btn1:hover span{
+    color:black;
+}
+
+header div.header_info button.btn2{
+    /* background-color:white; */
+    
+}
+header div.header_info button.btn2 span{
+   color:black;
+}
+header div.header_info button.btn2:hover{
+    background-color:rgba(0,0,0,0.1);
+    
+}
+button.content_btn a{
+    text-decoration: none;
+}
+button.content_btn span{
+   
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.ball_box{
+    width:30px;
+    height: 50px;
+  
+    margin: 100px auto 0px;
+    border-radius:15px;
+    -webkit-border-radius:15px;
+    -moz-border-radius:15px;
+    -ms-border-radius:15px;
+    -o-border-radius:15px;
+    border: 1px solid #fff;
+    position: relative;
+    overflow: hidden;
+
+
+}
+.ball_box .ball{
+     width: 10px;
+     height: 10px;
+     background:white;
+     border-radius: 50%;
+     -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+     -ms-border-radius: 50%;
+     -o-border-radius: 50%;
+     position: absolute;
+     top:6%;
+     left:33%;
+     animation-name:ball_move;
+     animation-duration:  5s;
+     animation-timing-function:ease-in-out;
+     animation-fill-mode:both; 
+     animation-iteration-count:infinite;
+     /* -webkit-animation:ball_move 5s ease-in-out 1s; */
+}
+@keyframes ball_move {
+    0%{
+      top:6%;
+      opacity: 1;
+    }
+    10%{
+        top:15%;
+       opacity: 0.75;
+    }
+    25%{
+       top:25%;
+       opacity: 0.5;
+    }
+    35% {top:35%;
+       opacity: 0.35;}
+    50%{
+        top:45%; 
+        opacity: 0.25;
+    }
+     75%{
+        top:75%; 
+        opacity: 0.10;
+    }
+    100%{
+        top:125%;
+        opacity: 0;
+       
+    }
+    
+}
